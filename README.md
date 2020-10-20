@@ -1,6 +1,6 @@
-#Reservia
+# Reservia
 - version: 1.0.0
-#Description
+# Description
 - template HTML/CSS
-#Install libraries
+# Install libraries
 - npm install
