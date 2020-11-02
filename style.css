@@ -66,7 +66,9 @@ nav .nav-register {
     padding-right: 10px;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
-
+}
+.search-form-submit:before {
+    content: "Rechercher";
 }
 .search-filter {
     margin-top: 20px;
@@ -271,6 +273,7 @@ footer {
 .icon-star-grey {
     color: #dcdcdc;
 }
+
 /* Petites résolutions desktop */
 
 @media screen and (max-width: 1400px) {
@@ -290,11 +293,22 @@ footer {
     .item-activity {
         margin-top: 40px;
     }
+    .img-item-activity {
+        min-height: 400px;
+    }
     .popular {
         display: flex;
         flex-wrap: wrap;
         order: -1;
         width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .popular h2 {
+        padding: 10px;
+    }
+    .item-popular {
+        width: 700px;
     }
     .lodging {
         padding: 10px;
@@ -333,6 +347,11 @@ footer {
         margin-top: 70px;
         text-align: center;
     }
+    .search-form-submit:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f002";
+    }
     .search-filter {
         display: flex;
         flex-direction: column;
@@ -340,15 +359,12 @@ footer {
     .search-filter-icon {
         margin: 15px;
     }
-    .popular {
-        padding: 10px;
-        flex-direction: column;
+
+    .item-popular {
+        width: 100%;
     }
     .popular h2 {
         padding: 0;
-    }
-    .item-popular {
-        width: 100%;
     }
     .img-item-popular h4, .img-item-popular p {
         padding-bottom: 20px;
@@ -362,6 +378,9 @@ footer {
     .img-item-lodging {
         width: 100%;
     }
+    .img-item-activity {
+        min-height: 200px;
+    }
     .star-popular {
         margin-top: 20px;
     }
@@ -370,7 +389,9 @@ footer {
         margin-left: 20px;
     }
 }
+
 /* En production les images seront générées en JavaScript */
+
 #img1-lodging {
     background-image: url('images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
 }
@@ -399,32 +420,46 @@ footer {
     background-image: url('images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
 }
 #img1-activity {
-    min-width: 290px;
-    min-height: 450px;
     background-image: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg');
 }
 #img2-activity {
-    min-width: 290px;
-    min-height: 200px;
     background-image: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
 }
 #img3-activity {
-    min-width: 290px;
-    min-height: 170px;
     background-image: url('images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg');
 }
 #img4-activity {
-    min-width: 290px;
-    min-height: 450px;
     background-image: url('images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg');
 }
 #img5-activity {
-    min-width: 290px;
-    min-height: 150px;
     background-image: url('images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg');
 }
 #img6-activity {
-    min-width: 290px;
-    min-height: 220px;
     background-image: url('images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg');
+}
+@media screen and (min-width: 1400px) {
+    #img1-activity {
+        min-width: 290px;
+        min-height: 450px;
+    }
+    #img2-activity {
+        min-width: 290px;
+        min-height: 200px;
+    }
+    #img3-activity {
+        min-width: 290px;
+        min-height: 170px;
+    }
+    #img4-activity {
+        min-width: 290px;
+        min-height: 450px;
+    }
+    #img5-activity {
+        min-width: 290px;
+        min-height: 150px;
+    }
+    #img6-activity {
+        min-width: 290px;
+        min-height: 220px;
+    }
 }
