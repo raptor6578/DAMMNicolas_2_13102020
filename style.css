@@ -271,12 +271,41 @@ footer {
 .icon-star-grey {
     color: #dcdcdc;
 }
+/* Petites résolutions desktop */
 
-/* Affichage mobile */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1400px) {
     .main-container {
         padding: 10px;
     }
+    .main-container, .footer-container {
+        max-width: 930px;
+    }
+    .activity {
+        flex-direction: column;
+    }
+    .activity h2 {
+        margin: 0;
+        padding: 0;
+    }
+    .item-activity {
+        margin-top: 40px;
+    }
+    .popular {
+        display: flex;
+        flex-wrap: wrap;
+        order: -1;
+        width: 100%;
+    }
+    .lodging {
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+/* Affichage smartphone et tablette */
+
+@media screen and (max-width: 768px) {
     nav {
         display: flex;
         flex-direction: column;
@@ -312,8 +341,8 @@ footer {
         margin: 15px;
     }
     .popular {
-        order: -1;
         padding: 10px;
+        flex-direction: column;
     }
     .popular h2 {
         padding: 0;
@@ -324,10 +353,6 @@ footer {
     .img-item-popular h4, .img-item-popular p {
         padding-bottom: 20px;
     }
-    .lodging {
-        padding: 10px;
-        margin-top: 20px;
-    }
     .lodging h2 {
         padding: 0;
     }
@@ -336,23 +361,6 @@ footer {
     }
     .img-item-lodging {
         width: 100%;
-    }
-    .activity {
-        flex-direction: column;
-    }
-    .activity h2 {
-        margin: 0;
-        padding: 0;
-    }
-    .item-activity {
-        margin-top: 40px;
-
-    }
-    .img-item-activity {
-
-    }
-    .activities-column {
-
     }
     .star-popular {
         margin-top: 20px;
